@@ -45,6 +45,8 @@ li #delete {
     border-radius: .2rem;
     color: white;
     transition: all .2s linear;
+    height: max-content;
+    margin-left: 1rem;
 }
 
 /* Hover styling for delete button */
