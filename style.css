@@ -1,0 +1,96 @@
+/* Styling for list items */
+li {
+    padding: 1rem;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #CAC4CE;
+    border-radius: .5rem;
+}
+
+/* Styling for list items when we hover them */
+li:hover{
+    border: .1rem solid black;
+}
+
+/* Styling for due date within list item */
+li #dueDate {
+    color: red;
+}
+
+/* Styling for task text within list item */
+li #taskText {
+    font-weight: 700;
+}
+
+/* Styling for checked tasks */
+.checked {
+    text-decoration: line-through;
+}
+
+/* Styling for unchecked tasks */
+input[type="checkbox"]:checked ~ #taskText {
+    font-weight: 100;
+}
+
+/* Styling for unchecked due dates */
+input[type="checkbox"]:checked ~ #dueDate {
+    font-weight: 100;
+}
+
+/* Styling for delete button within list item */
+li #delete {
+    background-color: rgb(253, 55, 55);
+    padding: .2rem .5rem;
+    border-radius: .2rem;
+    color: white;
+    transition: all .2s linear;
+}
+
+/* Hover styling for delete button */
+li #delete:hover {
+    background-color: white;
+    color: red;
+}
+
+/* Styling for checkboxes */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    background-color: white;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Styling for checked checkboxes */
+input[type="checkbox"]:checked::before {
+    content: "\2714"; /* Unicode checkmark symbol */
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hover styling for checkboxes */
+input[type="checkbox"]:hover {
+    border-color: #007bff;
+}
+
+/* Styling for elements within list items */
+li div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
